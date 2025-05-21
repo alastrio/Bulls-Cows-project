@@ -4,6 +4,8 @@ def get_answer ():
     answer = ""
     while len(answer) < 4:
         a = random.choice(numbers)
-        if a not in answer:
-            answer += a
+        if a == "0" and len(answer) == 0:
+            break
+        elif a not in answer:
+                answer += a
     return answer
